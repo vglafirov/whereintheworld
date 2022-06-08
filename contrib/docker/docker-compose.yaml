@@ -26,6 +26,7 @@ services:
       - DB_USER=whereintheworld
       - DB_HOST=db
       - DB_PASSWORD=whereintheworld
+      - ALLOWED_HOSTS=*
     ports:
       - '8000:8000'
     networks:
