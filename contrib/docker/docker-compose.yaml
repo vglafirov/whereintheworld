@@ -1,0 +1,37 @@
+version: '3.8'
+
+networks:
+  whereintheworld:
+
+
+services:
+  db:
+    image: postgis/postgis:14-3.2-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
+      - ../db/init.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    networks:
+      - whereintheworld
+
+  api:
+    image: whereintheworld:0.0.1
+    restart: always
+    environment:
+      - DB_USER=whereintheworld
+      - DB_HOST=db
+      - DB_PASSWORD=whereintheworld
+    ports:
+      - '8000:8000'
+    networks:
+      - whereintheworld
+    depends_on:
+      - db
+volumes:
+  db:
+    driver: local
