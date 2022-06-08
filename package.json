@@ -51,7 +51,7 @@
         "start": "concurrently \"yarn start:app\" \"kea-typegen watch\" -n APP,KEA -c blue,green",
         "start:app": "yarn clean && BROWSER=none react-app-rewired start",
         "build": "yarn clean && yarn typegen:write && react-app-rewired build",
-        "test": "react-app-rewired test",
+        "test": "python runtests.py --no-lint",
         "eject": "react-scripts eject",
         "typegen:write": "kea-typegen write",
         "clean": "rm -rf build/",

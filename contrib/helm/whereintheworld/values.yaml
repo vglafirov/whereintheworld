@@ -77,8 +77,8 @@ tolerations: []
 affinity: {}
 
 oauth2:
-    key: 666613197470-u144ou7qafo9vo83r43e4gso2ulmdhm8.apps.googleusercontent.com
-    secret: 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
+    key: some_key
+    secret: some_secret
 
 debug: true
 
