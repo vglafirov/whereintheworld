@@ -3259,6 +3259,13 @@ check-types@^11.1.1:
   resolved "https://registry.yarnpkg.com/check-types/-/check-types-11.1.2.tgz#86a7c12bf5539f6324eb0e70ca8896c0e38f3e2f"
   integrity sha512-tzWzvgePgLORb9/3a0YenggReLKAIb2owL03H2Xdoe5pKcUyWRSEQ8xfCar8t2SIAuEDwtmx2da1YB52YuHQMQ==
 
+child-process-promise@^0.2.0-SNAPSHOT.1389671754086:
+  version "0.2.0-SNAPSHOT.1389671754086"
+  resolved "https://registry.yarnpkg.com/child-process-promise/-/child-process-promise-0.2.0-SNAPSHOT.1389671754086.tgz#9e3967e4c99d932a56e2f692f72edbbfa2ade8bd"
+  integrity sha512-u9CcX/laZdw2m8mYRSQdaQw4FBYa9l4lY7tlWSSLalxtgP+kTy6rnoD0MkQeEQKNFo4FwT/MJztgHAbWE7hEpw==
+  dependencies:
+    q "~0.9.6"
+
 chokidar@3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.1.tgz#ee9ce7bbebd2b79f49f304799d5468e31e14e68a"
@@ -3413,7 +3420,7 @@ combined-stream@^1.0.8:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.20.0:
+commander@^2.2.0, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -4022,6 +4029,11 @@ detect-element-overflow@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/detect-element-overflow/-/detect-element-overflow-1.2.0.tgz#86e504292ffedc3aef813395fbdf0261aaf6afa9"
   integrity sha512-Jtr9ivYPhpd9OJux+hjL0QjUKiS1Ghgy8tvIufUjFslQgIWvgGr4mn57H190APbKkiOmXnmtMI6ytaKzMusecg==
+
+detect-indent@^0.1.3:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-0.1.4.tgz#c28e1303c1c4ad5ce0549902b884043afc5906b0"
+  integrity sha512-l4ITFkcAEpUpmp40XheF+Epbp2tcResjhXYEJG2cuTNBk/JeN4gAdPPI8PgRj80Hc19l8SUPehfw30moSJXiug==
 
 detect-newline@^3.0.0:
   version "3.1.0"
@@ -6949,6 +6961,13 @@ multicast-dns@^6.0.1:
     dns-packet "^1.3.1"
     thunky "^1.0.2"
 
+multiline@^0.3.0:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/multiline/-/multiline-0.3.4.tgz#1d38cb053097b5b94b21fcd31b10b116559defdc"
+  integrity sha512-F4/m1gFxvrpFlW/kIBOrGtB9mVpIoQ5PgT+vd6hC63u7vggtYnw1LG/zjkLoxQXI7sDexPlfbF6+w0jmvIfsnQ==
+  dependencies:
+    strip-indent "^0.1.0"
+
 nanoid@^3.1.23, nanoid@^3.1.30:
   version "3.1.30"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.30.tgz#63f93cc548d2a113dc5dfbc63bfa09e2b9b64362"
@@ -8222,6 +8241,11 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+q@~0.9.6:
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/q/-/q-0.9.7.tgz#4de2e6cb3b29088c9e4cbc03bf9d42fb96ce2f75"
+  integrity sha512-ijt0LhxWClXBtc1RCt8H0WhlZLAdVX26nWbpsJy+Hblmp81d2F/pFsvlrJhJDDruFHM+ECtxP0H0HzGSrARkwg==
+
 qs@6.9.6:
   version "6.9.6"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.6.tgz#26ed3c8243a431b2924aca84cc90471f35d5a0ee"
@@ -9019,6 +9043,11 @@ semver@7.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
   integrity sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==
 
+semver@^2.2.1:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-2.3.2.tgz#b9848f25d6cf36333073ec9ef8856d42f1233e52"
+  integrity sha512-abLdIKCosKfpnmhS52NCTjO4RiLspDfsn37prjzGrp9im5DPJOgh82Os92vtwGh6XdQryKI/7SREZnV+aqiXrA==
+
 semver@^5.6.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
@@ -9491,6 +9520,11 @@ strip-final-newline@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strip-final-newline/-/strip-final-newline-2.0.0.tgz#89b852fb2fcbe936f6f4b3187afb0a12c1ab58ad"
   integrity sha512-BrpvfNAE3dcvq7ll3xVumzjKjZQ5tI1sEUIKr3Uoks0XUl45St3FlatVqef9prk4jRDzhW6WZg+3bk93y6pLjA==
+
+strip-indent@^0.1.0:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-0.1.3.tgz#c43ccb66c24e49c4e27b2236d34fe2c4bbcf14dc"
+  integrity sha1-xDzLZsJOScTieyI200/ixLvPFNw=
 
 strip-indent@^3.0.0:
   version "3.0.0"
@@ -10146,6 +10180,17 @@ vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
+
+version-bump@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/version-bump/-/version-bump-0.1.0.tgz#207dede08c134cd9d6f4d7f433a43aedea2fd04d"
+  integrity sha1-IH3t4IwTTNnW9Nf0M6Q67eov0E0=
+  dependencies:
+    child-process-promise "^0.2.0-SNAPSHOT.1389671754086"
+    commander "^2.2.0"
+    detect-indent "^0.1.3"
+    multiline "^0.3.0"
+    semver "^2.2.1"
 
 vfile-message@^2.0.0:
   version "2.0.4"
