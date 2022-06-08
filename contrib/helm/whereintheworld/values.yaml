@@ -1,25 +1,49 @@
+## @param replicaCount Number of backend replicas
+##
 replicaCount: 1
 
+## @param image.repository WITW image repository
+## @param image.tag WITW image tag (immutable tags are recommended)
+## @param image.pullPolicy WITW image pull policy
+##
 image:
     repository: vglafirov/whereintheworld
     pullPolicy: IfNotPresent
     tag: '0.0.1'
 
+## @param pullSecrets Specify image pull secrets
+##
 imagePullSecrets: []
+
+## @param nameOverride Override release name
+##
 nameOverride: ''
+
+## @param nameOverride Override full release name
+##
 fullnameOverride: ''
 
+## @param serviceAccount.create Create service account?
+## @param serviceAccount.annotations Service account annotations
+## @param serviceAccount.name Service account name
+##
 serviceAccount:
     create: true
     annotations: {}
     name: ''
 
+## @param podAnnotations Custom pod annotations
+##
 podAnnotations: {}
 
+## @param podSecurityContext Custom pod security context
+##
 podSecurityContext:
     {}
     # fsGroup: 2000
 
+## @param securityContext Custom security context
+##
 securityContext:
     {}
     # capabilities:
@@ -29,10 +53,15 @@ securityContext:
     # runAsNonRoot: true
     # runAsUser: 1000
 
+## @param service.type Service type
+## @param service.port Service port
+##
 service:
     type: ClusterIP
     port: 80
 
+## @param ingress.enabled Enable ingress?
+##
 ingress:
     enabled: false
     className: ''
@@ -50,6 +79,9 @@ ingress:
     #    hosts:
     #      - chart-example.local
 
+## Resources definition
+## @param ingress.enabled Enable ingress?
+##
 resources:
     {}
     # We usually recommend not to specify default resources and to leave this as a conscious
@@ -63,6 +95,9 @@ resources:
     #   cpu: 100m
     #   memory: 128Mi
 
+## Autoscaling definition
+## @param autoscaling.enabled Enable autoscaling?
+##
 autoscaling:
     enabled: false
     minReplicas: 1
@@ -70,21 +105,34 @@ autoscaling:
     targetCPUUtilizationPercentage: 80
     # targetMemoryUtilizationPercentage: 80
 
+## @param nodeSelector Node selector
+##
 nodeSelector: {}
 
+## @param tolerations Custom tolerations
+##
 tolerations: []
 
+## @param affinity Custom affinity
+##
 affinity: {}
 
+## @param oauth2.key Oauth2 key
+## @param oauth2.secret Oauth2 secret
+##
 oauth2:
     key: some_key
     secret: some_secret
-
+## @param debug Enable debug logging?
+##
 debug: true
 
+## @param cors.hosts List of ALLOWED_HOSTS for CORS
+##
 cors:
     hosts: '*'
-
+## @param postgresql.enabled Deploy postgres chard dependency?
+##
 postgresql:
     enabled: true
     nameOverride: witw-postgresql
@@ -98,11 +146,16 @@ postgresql:
         persistence:
             enabled: false
             size: 1Gi
+        ## This is hardcoded initdb script to make PostGIS extention working
         initdb:
             scripts:
                 initdb.sh: |
                     #!/bin/sh
                     psql -h localhost -U postgres -d postgres -c 'ALTER ROLE whereintheworld SUPERUSER;'
+## @param externalPostgresql.host External Postgres host name
+## @param externalPostgresql.auth.username External Postgres database username
+## @param externalPostgresql.auth.username External Postgres database password
+##
 externalPostgresql:
     host: localhost
     auth:
